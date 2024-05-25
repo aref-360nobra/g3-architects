@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --background_color: rgb(34, 238, 170);
+    --background_color: #22eeaa;
     --light_grey_text: #727272;
     --black: #131313;
     --white: #ffffff;
-    --light_bg: rgba(34, 238, 170, 0.1);
+    --light_bg: #22eeaa1a;
     --light_black: #424242;
     --box_shadow: -5px 5px 30px rgba(0, 0, 0, 0.2);
     --box_shadow2: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    --h3_font_size_and_icon_ratio: 45px;
+    --p_font_size: 1rem;
 }
 
 /* shared styles */
@@ -163,7 +165,7 @@ main {
 
 .teams_description {
     color: var(--light_grey_text);
-    font-size: 1rem;
+    font-size: var(--p_font_size);
     font-weight: 400;
     line-height: 26px;
     text-align: left;
@@ -171,14 +173,14 @@ main {
 
 /* facts section */
 .ml240px {
-    margin-left: 8rem;
+    margin-left: calc((var(--p_font_size))*8);
 }
 
 .some_facts {
     color: var(--black);
-    font-size: 45px;
+    font-size: var(--h3_font_size_and_icon_ratio);
     line-height: 53px;
-    margin-top: 5rem;
+    margin-top: calc((var(--p_font_size))*5);
     margin-bottom: 1.11px;
 }
 
@@ -187,7 +189,7 @@ main {
     font-weight: 400;
     line-height: 26px;
     max-width: 542px;
-    margin-bottom: 2rem;
+    margin-bottom: calc((var(--p_font_size))*2);
 }
 
 .facts_card_container {
@@ -220,9 +222,24 @@ main {
 }
 
 .card img {
-    width: 45px;
-    height: 45px;
+    width: var(--h3_font_size_and_icon_ratio);
+    height: var(--h3_font_size_and_icon_ratio);
 }
+
+/* sponsors */
+
+.section_title {
+    color: var(--black);
+    font-size: var(--h3_font_size_and_icon_ratio);
+    line-height: 53px;
+    text-align: center;
+    margin-top: 180px;
+    margin-bottom: 32px;
+}
+
+
+
+
 
 /* responsive media queries */
 
