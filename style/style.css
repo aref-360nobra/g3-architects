@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --background_color: #22eeaa;
+    --background_color: #39dd40;
     --light_grey_text: #727272;
     --black: #131313;
     --white: #ffffff;
-    --light_bg: #22eeaa1a;
+    --light_bg: #39dd401a;
     --light_black: #424242;
-    --box_shadow: -5px 5px 30px rgba(0, 0, 0, 0.2);
-    --box_shadow2: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    --box_shadow: -5px 5px 30px #00000033;
+    --box_shadow2: 5px 5px 15px #0000001a;
     --h3_font_size_and_icon_ratio: 45px;
     --p_font_size: 1rem;
 }
@@ -195,7 +195,8 @@ main {
 .facts_card_container {
     display: flex;
     justify-content: space-evenly;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .facts_card_container .card {
@@ -233,12 +234,29 @@ main {
     font-size: var(--h3_font_size_and_icon_ratio);
     line-height: 53px;
     text-align: center;
-    margin-top: 180px;
+    margin-top: 50px;
     margin-bottom: 32px;
 }
 
+.section_description {
+    color: var(--light_grey_text);
+    font-size: var(--p_font_size);
+    font-weight: 400;
+    text-align: center;
+}
 
+.sponsors_container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+}
 
+.sponsors_container img {
+    width: 152px;
+    height: 50px;
+}
 
 
 /* responsive media queries */
@@ -250,7 +268,8 @@ main {
 
     nav,
     .teams_container,
-    .facts_card_container {
+    .facts_card_container,
+    .sponsors_container {
         flex-direction: column;
     }
 
@@ -298,5 +317,15 @@ main {
     .some_facts,
     .some_facts_description {
         text-align: left;
+    }
+
+    .sponsors_container {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:100px) {
+    * {
+        visibility: hidden;
     }
 }
