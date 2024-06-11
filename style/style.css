@@ -214,7 +214,7 @@ main {
     line-height: 53px;
 }
 
-.card .card_title {
+.facts_card_container .card .card_title {
     font-size: 1.25rem;
     font-weight: 600;
     line-height: 23px;
@@ -222,7 +222,7 @@ main {
     margin-bottom: 10px;
 }
 
-.card img {
+.facts_card_container .card img {
     width: var(--h3_font_size_and_icon_ratio);
     height: var(--h3_font_size_and_icon_ratio);
 }
@@ -258,6 +258,109 @@ main {
     height: 50px;
 }
 
+/* features section styles */
+
+.features {
+    display: flex;
+    margin-top: 130px;
+    gap: 150px;
+    padding-bottom: 130px;
+}
+
+.feature_card {
+    border-radius: 8px;
+    box-shadow: var(--box_shadow2);
+    background: var(--white);
+    margin: 25px 0 25px 0;
+    padding: 0 0 30px 30px;
+}
+
+.ten_years_badge {
+    border-radius: 8px;
+    background: var(--background_color);
+    width: 342px;
+    /* height: 200px; */
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    bottom: 100px;
+    right: 92px;
+}
+
+.ten_years_badge h2,
+.ten_years_badge p {
+    color: var(--white);
+}
+
+.ten_years_badge h2 {
+    font-size: 4rem;
+}
+
+.ten_years_badge p {
+    font-size: 1.5rem;
+}
+
+.feature_card_title {
+    padding-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.feature_title {
+    color: var(--black);
+    font-size: 2.8125rem;
+    border-left: 5px solid var(--background_color);
+    padding-left: 21px;
+}
+
+.feature_description {
+    margin-top: 24px;
+    margin-bottom: 60px;
+    font-size: 1rem;
+}
+
+.feature_card_title {
+    color: var(--black);
+    text-align: left;
+}
+
+.feature_card_description {
+    color: var(--light_grey_text);
+    font-size: 1rem;
+}
+
+.feature_img {
+    height: 900px;
+}
+
+.feature_img img {
+    height: 90%;
+    margin-left: 50px;
+}
+
+/* footer styles */
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    background: var(--light_bg);
+    width: 1440px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8.752rem;
+}
+
+.footer p {
+    color: var(--light_black);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0%;
+    border-radius: 8px;
+}
 
 /* responsive media queries */
 
@@ -269,8 +372,18 @@ main {
     nav,
     .teams_container,
     .facts_card_container,
-    .sponsors_container {
+    .sponsors_container,
+    .features {
         flex-direction: column;
+    }
+
+    .features {
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .ten_years_badge {
+        left: 20%;
     }
 
     .facts_card_container {
